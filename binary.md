@@ -10,4 +10,4 @@
 o 0.625 = 0.5 + 0.125  
 x 0.45 = 0.25 + 0.2
 
-https://www.ap-siken.com/kakomon/26_haru/q1.html
+- [過去問](https://www.ap-siken.com/kakomon/26_haru/q1.html)
