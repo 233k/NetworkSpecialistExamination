@@ -45,6 +45,8 @@
 
 Learning と Forwading のみ 受信したフレームの送信元MACアドレスを学習している。
 
+収束まで50秒かかる
+
 # Ref
 - https://www.infraexpert.com/study/stpz1.html
 - https://www.infraexpert.com/study/stpz2.html
