@@ -32,6 +32,12 @@
 4. UpLink について Path Cost が最小の1ポート(Root Port, ルートポート)のみを開放し、他のポート(RSTP でのAlternate Port, 代替ポートのこと)をブロックする
 5. DownLink のポート(Designated Port, 代表ポート)については基本的にすべて開放するが、例外的に自分のスイッチ内でループする場合は片方をブロックする(RSTP でのBackup Port)
 
+## 決定手順
+
+1. 各スイッチで、ルートブリッジに最も近いポートがルートポート
+2. 各セグメント（機器と機器をつないだ線）で、ルートブリッジに最も近いポートが指定ポート
+3. それ以外がブロックポート
+
 ## ポート状態遷移
 
 ```
@@ -69,3 +75,5 @@ Learning と Forwading のみ 受信したフレームの送信元MACアドレ�
 - https://www.infraexpert.com/study/stpz2.html
 - https://www.infraexpert.com/study/stpz3.html
 - https://milestone-of-se.nesuke.com/nw-basic/stp/stp-summary/
+- https://nw.seeeko.com/archives/cat_10022499.html
+  
