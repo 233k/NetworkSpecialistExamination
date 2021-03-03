@@ -94,6 +94,20 @@ LAN間接続
 
 **XAUTH**：IPsecでユーザ認証を行う。フェーズ1の後XAUTHによるユーザ名/パスワード認証を行う。
 
+## GRE over IPsec
+
+GRE over IPsec
+
+- トンネリング：GRE
+- 暗号化：IPsec
+
+典型的な使用例
+
+IPsecを使用したインターネットVPN回線において、OSPFによる動的な経路制御を行うネットワークである。OSPFはマルチキャストパケットを用いて、経路のリンク制御をしている。しかし、IPsecは、IPマルチキャストパケットをカプセル化することができない。そこで、トンネリングプロトコルであるGREパケットでIPマルチキャストパケットをカプセル化し、それを更にIPsecでカプセル化している。IPsecでのカプル化時は、トランスポートモードを用いる。
+
+> IPsec SA は一般的なトンネルモードではなくトランスポートモードで確立され、ESP によるカプセル化の際に GRE パケットの IP ヘッダは削除されます。これは、IPsec におけるトランスポートモードがトンネルモードと対照的に Host-to-Host の VPN 接続で使用することを想定しており、トランスポートモードで GRE パケットの IP ヘッダを省略することによってオーバーヘッドの削減、カプセル化に必要な計算リソースの低減を実現しているためです。
+
 # Ref
 
 - https://www.furukawa.co.jp/network/vpn/about_vpn/ipsec/ipsec_top.html
+- https://dev.classmethod.jp/articles/gre-over-ipsec-v6-transport/
