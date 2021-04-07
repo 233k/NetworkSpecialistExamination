@@ -5,8 +5,16 @@
 
 ## 通信モード
 
-- **トランスポートモード** : 全区間（終端ノード間）に渡ってカプセル化の対象とする
-- **トンネルモード**：一部の区間（通信経路上のルータ）をカプセル化の対象とする
+- **トランスポートモード** : 全区間（終端ノード間）に渡ってカプセル化の対象とする。送信元のIPペイロードのみ暗号化され、**送信元のIPヘッダは、そのまま使用される**
+- **トンネルモード**：一部の区間（通信経路上のルータ）をカプセル化の対象とする。**送信元のIPヘッダとIPペイロードのどちらも暗号化され、新しいIPヘッダが追加される**
+
+トンネルモードでは、VPNゲートウェイを介して端末同士はIPsecを全く意識せずにLAN間通信を行うことができる。
+
+送信端末同士が、グローバルIPアドレスを持つ場合やIP in IP（IPIPトンネリング）を使用している場合は、トランスポートモードを使用可能となる。
+
+![](http://atnetwork.info/ccnp4/vpn0407.jpg)
+
+↑は、認証範囲・暗号化範囲にIPアドレス・ポート番号が含まれているかによる。
 
 ## セキュリティポリシ
 
@@ -111,3 +119,5 @@ IPsecを使用したインターネットVPN回線において、OSPFによる�
 
 - https://www.furukawa.co.jp/network/vpn/about_vpn/ipsec/ipsec_top.html
 - https://dev.classmethod.jp/articles/gre-over-ipsec-v6-transport/
+- https://www.infraexpert.com/study/ipsec6.html
+- http://atnetwork.info/ccnp4/vpn04.html
