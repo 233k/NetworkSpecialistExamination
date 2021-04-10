@@ -102,6 +102,10 @@ LAN間接続
 
 **XAUTH**：IPsecでユーザ認証を行う。フェーズ1の後XAUTHによるユーザ名/パスワード認証を行う。
 
+## VPNパススルー
+
+> ルータなどが持つ機能の一つで、LAN内のプライベートアドレスを持ったVPNクライアントのパケットをインターネット側に通過させること。インターネットとLANの境界に位置するルータには、グローバルIPアドレスとプライベートIPアドレスを変換するNATなどの機能でLAN内のマシンからインターネットへの接続を仲介するが、LAN内のマシンが外部のネットワークとVPNを構成して通信を行ないたい場合、NATなどのアドレス変換が行なわれるとVPN通信がうまくいかない場合が多い。このため、VPNのためのパケットはそのまま通過させるという機能が必要とされ、これがVPNパススルーと呼ばれる。 VPNにはIPsecやPPTP、L2TPなどのプロトコルが使われるが、VPNパススルーを行なうためには基本的にはこれらに個別に対応する必要があるため、どのプロトコルのパススルーに対応しているか確認する必要がある。
+
 ## GRE over IPsec
 
 GRE over IPsec
@@ -121,3 +125,4 @@ IPsecを使用したインターネットVPN回線において、OSPFによる�
 - https://dev.classmethod.jp/articles/gre-over-ipsec-v6-transport/
 - https://www.infraexpert.com/study/ipsec6.html
 - http://atnetwork.info/ccnp4/vpn04.html
+- https://japan.zdnet.com/glossary/exp/VPN%E3%83%91%E3%82%B9%E3%82%B9%E3%83%AB%E3%83%BC/#:~:text=%E3%83%AB%E3%83%BC%E3%82%BF%E3%81%AA%E3%81%A9%E3%81%8C%E6%8C%81%E3%81%A4%E6%A9%9F%E8%83%BD,%E5%81%B4%E3%81%AB%E9%80%9A%E9%81%8E%E3%81%95%E3%81%9B%E3%82%8B%E3%81%93%E3%81%A8%E3%80%82&text=%E3%81%93%E3%81%AE%E3%81%9F%E3%82%81%E3%80%81VPN%E3%81%AE%E3%81%9F%E3%82%81,%E3%81%93%E3%82%8C%E3%81%8CVPN%E3%83%91%E3%82%B9%E3%82%B9%E3%83%AB%E3%83%BC%E3%81%A8%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E3%80%82
