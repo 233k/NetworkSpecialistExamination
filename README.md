@@ -1,2 +1,6 @@
 # NetworkSpecialistExamination
 ねすぺのべんきょう
+
+🎉🎉🎉🎉🎉
+
+![](./tweet.png)
